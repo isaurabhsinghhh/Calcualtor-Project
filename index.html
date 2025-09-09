@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" id="input-box">
+        </div>
+            <div class="buttons">
+
+                <!--button for AC-->
+                <button class="eachButtons" onclick="getValue=getValue='';
+                inputValues();">AC</button>
+
+                <!--button for 1-->
+                <button class="eachButtons" onclick="getValue=getValue+'1';
+                inputValues();">1</button>
+
+                <!--button for 2-->
+                <button class="eachButtons" onclick="getValue=getValue+'2';
+                inputValues();">2</button>
+
+                <!--button for +-->
+                <button class="eachButtons" onclick="getValue=getValue+'+';
+                inputValues();">+</button>
+
+                <!--button for 3-->
+                <button class="eachButtons" onclick="getValue=getValue+'3';
+                inputValues();">3</button>
+
+                <!--button for 4-->
+                <button class="eachButtons" onclick="getValue=getValue+'4';
+                inputValues();">4</button>
+
+                <!--button for --->
+                <button class="eachButtons" onclick="getValue=getValue+'-';
+                inputValues();">-</button>
+
+                <!--button for 5-->
+                <button class="eachButtons" onclick="getValue=getValue+'5';
+                inputValues();">5</button>
+
+                <!--button for 6-->
+                <button class="eachButtons" onclick="getValue=getValue+'6';
+                inputValues();">6</button>
+
+                <!--button for *-->
+                <button class="eachButtons" onclick="getValue=getValue+'*';
+                inputValues();">*</button>
+
+                <!--button for 7-->
+                <button class="eachButtons" onclick="getValue=getValue+'7';
+                inputValues();">7</button>
+
+                <!--button for 8-->
+                <button class="eachButtons" onclick="getValue=getValue+'8';
+                inputValues();">8</button>
+
+                <!--button for /-->
+                <button class="eachButtons" onclick="getValue=getValue+'/';
+                inputValues();">/</button>
+
+                <!--button for 9-->
+                <button class="eachButtons" onclick="getValue=getValue+'9';
+                inputValues();">9</button>
+
+                <!--button for 0-->
+                <button class="eachButtons" onclick="getValue=getValue+'0';
+                inputValues();">0</button>
+
+                <!--button for .-->
+                <button class="eachButtons" onclick="getValue=getValue+'.';
+                inputValues();">.</button>
+
+                <!--button for =-->
+                <button class="eachButtons" id="equal" onclick="calculation();">=</button>
+
+                calculation();
+
+            </div>
+
+            <div class="rights">
+                    <p>© All rights reserved Saurabh Singh</p>
+            </div>
+
+    </div>
+    <script>
+        let result;
+        let getValue='';
+        function inputValues(){
+            document.querySelector('#input-box').value=getValue;
+        }
+
+        function calculation(){
+            result=eval(getValue);
+            getValue=result;
+            inputValues();
+        }
+    </script>
+</body>
+</html>
